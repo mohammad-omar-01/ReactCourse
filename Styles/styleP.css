@@ -1,0 +1,9 @@
+div{
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    row-gap: 1cm;
+    background-color: #f5f5f5;
+}
