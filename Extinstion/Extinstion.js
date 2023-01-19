@@ -2,10 +2,19 @@ const button=document.getElementById("btn");
 let array=[];
 let list=document.getElementById("list");
 let savetab=document.getElementById("saveTab");
-console.log(savetab);
-
+let deletetab=document.getElementById("btnDelete");
+console.log(deletetab);
+let inputText=document.getElementById("input-el");
+inputText.addEventListener("keypress", function(event) {
+    if (event.key=="Enter") {
+        button.click();
+    }
+});
+   
 let localStorage=window.localStorage;
 function setUp() {
+    array=[];
+    list.innerHTML="";
     array=JSON.parse(localStorage.getItem("myArray"));
     if (array==null) {
         array=[];
@@ -28,12 +37,13 @@ savetab.addEventListener("click", function(){
     });
 });
 
-
-function Clear() {
+deletetab.addEventListener("click", function(){
     localStorage.clear();
     array=[];
     list.innerHTML="";
 }
+);
+
 
 button.addEventListener("click", function(){
     let inputn=document.getElementById("input-el").value;
@@ -49,5 +59,7 @@ button.addEventListener("click", function(){
 
    
 });
+window.onload=setUp();
+
 
 

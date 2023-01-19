@@ -1,12 +1,13 @@
 {
-    "manifest_version": 2,
-    "name": "My Extension",
+    "manifest_version": 3,
+    "name": "My Lead",
     "version": "1.0",
     "description": "My Extension",
     "action": {
         "default_icon": "icon.png",
-        "default_popup": "Extension.html"
+        "default_popup": "Extinsion.html"
     },
+    
     "permissions": [
         "tabs",
         "storage"

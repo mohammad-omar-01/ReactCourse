@@ -3,6 +3,8 @@ body{
     font-size: 12px;
     margin: 0;
     padding: 10px;
+    min-width: 20cm;
+    max-width: 40cm;
 }
 input{
     padding:10px 10px;
